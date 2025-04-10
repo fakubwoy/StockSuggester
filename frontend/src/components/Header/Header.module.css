@@ -1,0 +1,50 @@
+.header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  }
+  
+  .headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .title {
+    margin: 0;
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+  }
+  
+  .themeToggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .themeToggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }

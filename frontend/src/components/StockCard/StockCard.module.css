@@ -1,0 +1,285 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card.dark {
+  background: #16213e;
+  color: #e6e6e6;
+}
+
+.card.expanded {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stockInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.symbol {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.dark .symbol {
+  color: #e6e6e6;
+}
+
+.companyName {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dark .companyName {
+  color: #aaa;
+}
+
+.priceInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.change {
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.positive {
+  background-color: rgba(0, 200, 83, 0.1);
+  color: #00c853;
+}
+
+.dark .positive {
+  background-color: rgba(0, 200, 83, 0.2);
+}
+
+.negative {
+  background-color: rgba(255, 53, 71, 0.1);
+  color: #ff3547;
+}
+
+.dark .negative {
+  background-color: rgba(255, 53, 71, 0.2);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailLabel {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.dark .detailLabel {
+  color: #aaa;
+}
+
+.detailValue {
+  font-weight: 600;
+}
+
+.newsSection {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.dark .newsSection {
+  border-top-color: #2a2a4a;
+}
+
+.newsHeading {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.newsItem {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.dark .newsItem {
+  background: #1a1a2e;
+}
+
+.newsItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark .newsItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.newsTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.newsSource {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.dark .newsSource {
+  color: #aaa;
+}
+
+.newsTime {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+  
+  .details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .newsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardFooter {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.dark .cardFooter {
+  border-color: #2a5298;
+}
+
+.chartToggle {
+  background: none;
+  border: none;
+  color: #6e8efb;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.dark .chartToggle {
+  color: #a777e3;
+}
+
+.chartToggle:hover {
+  background: rgba(110, 142, 251, 0.1);
+}
+
+.dark .chartToggle:hover {
+  background: rgba(167, 119, 227, 0.1);
+}
+.expandedChart {
+  width: 800px;
+  max-width: 90vw;
+}
+
+.expandedChart h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.expandedChartWrapper {
+  height: 60vh;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.chartContainer {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.chartContainer:hover {
+  transform: translateY(-2px);
+}
+
+.chartWrapper {
+  width: 100%;
+}
+.chartButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: #6e8efb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dark .chartButton {
+  background: #a777e3;
+}
+
+.chartButton:hover {
+  background: #5a7df4;
+  transform: translateY(-2px);
+}
+
+.dark .chartButton:hover {
+  background: #9a67d9;
+}

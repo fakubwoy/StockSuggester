@@ -1,0 +1,48 @@
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f5f7fa;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.app.dark {
+  background-color: #1a1a2e;
+  color: #e6e6e6;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subTitle {
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.dark .subTitle {
+  color: #f8f9fa;
+}
+
+.stocksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.selectedStock {
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+  
+  .stocksGrid {
+    grid-template-columns: 1fr;
+  }
+}
