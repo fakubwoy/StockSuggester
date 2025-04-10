@@ -61,7 +61,12 @@ A modern React application for tracking stock market data with interactive chart
   npm install
   ```
 
-3. Start development server:
+3. Create a .env.local file in the frontend directory and add the following:
+  ```bash
+  VITE_API_URL=http://localhost:8000
+  ```
+
+4. Start development server:
   ```bash
   npm start
   ```
@@ -87,6 +92,7 @@ stock-suggester/
 │   │   ├── App.js         
 │   │   └── ...            
 │   └── package.json
+│   └── env.local
 │
 └── README.md
 ```
