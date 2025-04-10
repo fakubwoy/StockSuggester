@@ -7,6 +7,8 @@ import StockCard from './components/StockCard/StockCard';
 import ExpandedChartView from './components/ExpandedChartView/ExpandChartView'; 
 import Loader from './components/Loader/Loader';
 import styles from './App.module.css';
+import BASE_URL from './api';
+
 function App() {
   const [stocks, setStocks] = useState([]);
   const [search, setSearch] = useState("");
@@ -14,11 +16,11 @@ function App() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const [expandedChart, setExpandedChart] = useState(null); 
+  const [expandedChart, setExpandedChart] = useState(null);
 
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:8000/hot-stocks")
+    axios.get(`${BASE_URL}/hot-stocks`)
       .then(res => {
         setStocks(res.data);
         setLoading(false);
@@ -31,8 +33,8 @@ function App() {
     setLoading(true);
     try {
       const [stockRes, newsRes] = await Promise.all([
-        axios.get(`http://localhost:8000/search-stock/${search}`),
-        axios.get(`http://localhost:8000/stock-news/${search}`)
+        axios.get(`${BASE_URL}/search-stock/${search}`),
+        axios.get(`${BASE_URL}/stock-news/${search}`)
       ]);
       
       if (stockRes.data?.info || stockRes.data?.quote) {
