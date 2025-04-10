@@ -75,16 +75,16 @@ NEWS_API_KEY=your_newsapi_key_here
 ## Project Structure 
 ```bash
 stock-suggester/
-├── backend/               # FastAPI server
-│   ├── main.py            # API endpoints
-│   └── requirements.txt   # Python dependencies
-│   └── .env               #Created by user
+├── backend/               
+│   ├── main.py            
+│   └── requirements.txt   
+│   └── .env               
 │
-├── frontend/              # React application
+├── frontend/              
 │   ├── public/
 │   ├── src/
-│   │   ├── components/    # Reusable components
-│   │   ├── App.js         # Main application
+│   │   ├── components/    
+│   │   ├── App.js         
 │   │   └── ...            
 │   └── package.json
 │
